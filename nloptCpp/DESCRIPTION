@@ -1,0 +1,13 @@
+Package: nloptCpp
+Type: Package
+Title: Testing access to nlopt header via nloptr
+Version: 0.1.0
+Author: Julien Chiquet
+Maintainer: Julien Chiquet <julien.chiquet@gmail.com>
+Description: testing access to nlopt header via nloptr
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+LinkingTo: Rcpp, RcppArmadillo, nloptr
+Imports: Rcpp
+RoxygenNote: 6.0.1
