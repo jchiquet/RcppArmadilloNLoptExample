@@ -1,4 +1,6 @@
-
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 # RcppArmadilloNLoptExample
 
@@ -6,8 +8,7 @@ I wrote two simple packages trying to access respectively the `C` and `C++` nlop
 These packages also link to *RcppArmadillo* and *Rcpp* (apart from nloptr), since the goal is to write some C/C++ code using the features of both Rcpp(Armadillo) and nlopt, to eventually interface this code with R.
 
 These packages require the development version of *nloptr* in order to access the header via the file "nloptrAPI.h".
-
-```r
+```{r nloptr_dev, eval = FALSE}
 devtools::install_github("jyypma/nloptr")
 ```
 
@@ -15,51 +16,19 @@ devtools::install_github("jyypma/nloptr")
 
 Interface with the C API of nlopt works just fine, using the example provided by jyypma in [https://github.com/jyypma/nloptr/blob/master/tests/testthat/test-C-api.R](https://github.com/jyypma/nloptr/blob/master/tests/testthat/test-C-api.R). I just slightly modify the export to R SEXP object in order to use some Rcpp wrapper (see code below).
 
-
-```r
+```{r install_nloptC}
 devtools::install_github("jchiquet/RcppArmadilloNLoptExample/nloptC", force = TRUE)
 ```
 
-```
-## Downloading GitHub repo jchiquet/RcppArmadilloNLoptExample@master
-## from URL https://api.github.com/repos/jchiquet/RcppArmadilloNLoptExample/zipball/master
-```
-
-```
-## Installing nloptC
-```
-
-```
-## '/usr/lib/R/bin/R' --no-site-file --no-environ --no-save --no-restore  \
-##   --quiet CMD INSTALL  \
-##   '/tmp/RtmpdAJCW2/devtools7c4632f8e110/jchiquet-RcppArmadilloNLoptExample-f71dd4a/nloptC'  \
-##   --library='/home/jchiquet/R/x86_64-pc-linux-gnu-library/3.4'  \
-##   --install-tests
-```
-
-```
-## 
-```
-
-```
-## Reloading installed nloptC
-```
-
-
-```r
+```{r test nloptC API}
 library(nloptC)
 test_nlopt_c()
-```
-
-```
-## [1] 0.3333333 0.2962963
 ```
 
 ## Source of src/nlopt_c.cpp
 
 
-
-```r
+```{r src_c, eval = FALSE}
 #include "RcppArmadillo.h"
 
 // [[Rcpp::depends(RcppArmadillo)]]
@@ -130,40 +99,13 @@ Error: package or namespace load failed for ‘nloptCpp’ in dyn.load(file, DLL
 Error: loading failed
 ```
 
-
-```r
+```{r install_cpp}
 devtools::install_github("jchiquet/RcppArmadilloNLoptExample/nloptCpp", force = TRUE)
-```
-
-```
-## Downloading GitHub repo jchiquet/RcppArmadilloNLoptExample@master
-## from URL https://api.github.com/repos/jchiquet/RcppArmadilloNLoptExample/zipball/master
-```
-
-```
-## Installing nloptCpp
-```
-
-```
-## '/usr/lib/R/bin/R' --no-site-file --no-environ --no-save --no-restore  \
-##   --quiet CMD INSTALL  \
-##   '/tmp/RtmpdAJCW2/devtools7c461e9baa7a/jchiquet-RcppArmadilloNLoptExample-f71dd4a/nloptCpp'  \
-##   --library='/home/jchiquet/R/x86_64-pc-linux-gnu-library/3.4'  \
-##   --install-tests
-```
-
-```
-## 
-```
-
-```
-## Installation failed: Command failed (1)
 ```
 
 ## Source of src/nlopt_cpp.cpp
 
-
-```r
+```{r src_cpp, eval = FALSE}
 #include "RcppArmadillo.h"
 
 // [[Rcpp::depends(RcppArmadillo)]]
