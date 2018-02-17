@@ -7,7 +7,7 @@
 using namespace Rcpp;
 
 // test_nlopt_c
-Rcpp::NumericVector test_nlopt_c();
+std::vector<double> test_nlopt_c();
 RcppExport SEXP _nloptC_test_nlopt_c() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
