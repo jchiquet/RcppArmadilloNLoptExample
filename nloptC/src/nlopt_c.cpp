@@ -26,6 +26,12 @@ double myconstraint(unsigned n, const double *x, double *grad, void *data) {
     return ((a*x[0] + b) * (a*x[0] + b) * (a*x[0] + b) - x[1]);
 }
 
+//' A simple example for for NLOPT integration for RcppArmadillo
+//'
+//' @title NLOPT Integration Example
+//' @return A numeric vector with two elements
+//' @examples
+//' test_nlopt_c()
 //' @export
 // [[Rcpp::export]]
 std::vector<double> test_nlopt_c() {
