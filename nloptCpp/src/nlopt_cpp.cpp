@@ -30,6 +30,12 @@ double myvconstraint(const std::vector<double> &x, std::vector<double> &grad, vo
     return ((a*x[0] + b) * (a*x[0] + b) * (a*x[0] + b) - x[1]);
 }
 
+//' A simple example for for NLOPT integration for RcppArmadillo
+//'
+//' @title NLOPT Integration Example
+//' @return A numeric value
+//' @examples
+//' test_nlopt_cpp()
 //' @export
 // [[Rcpp::export]]
 double test_nlopt_cpp() {
