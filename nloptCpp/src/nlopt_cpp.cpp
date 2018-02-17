@@ -33,6 +33,7 @@ double myvconstraint(const std::vector<double> &x, std::vector<double> &grad, vo
   return ((a*x[0] + b) * (a*x[0] + b) * (a*x[0] + b) - x[1]);
 }
 
+//' @export
 // [[Rcpp::export]]
 double test_nlopt_cpp()
 {

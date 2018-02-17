@@ -28,6 +28,7 @@ double myconstraint(unsigned n, const double *x, double *grad, void *data)
     return ((a*x[0] + b) * (a*x[0] + b) * (a*x[0] + b) - x[1]);
 }
 
+//' @export
 // [[Rcpp::export]]
 Rcpp::NumericVector test_nlopt_c()
  {
