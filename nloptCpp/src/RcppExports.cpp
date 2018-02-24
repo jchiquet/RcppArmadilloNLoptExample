@@ -7,7 +7,7 @@
 using namespace Rcpp;
 
 // test_nlopt_cpp
-double test_nlopt_cpp();
+Rcpp::List test_nlopt_cpp();
 RcppExport SEXP _nloptCpp_test_nlopt_cpp() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;

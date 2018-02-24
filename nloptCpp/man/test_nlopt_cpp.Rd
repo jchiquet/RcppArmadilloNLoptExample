@@ -10,7 +10,7 @@ test_nlopt_cpp()
 A numeric value
 }
 \description{
-A simple example for for NLOPT integration for RcppArmadillo
+A simple example for NLOPT integration for RcppArmadillo
 }
 \examples{
 test_nlopt_cpp()

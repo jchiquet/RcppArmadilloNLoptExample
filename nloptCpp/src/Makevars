@@ -1,7 +1,6 @@
-
-## NLOPT libs
-NLOPTLIBS=-lnlopt -lm
-
+## NLOPT flags
+NLOPT_LIBS = -lnlopt -lm
+NLOPT_CXXFlags = -I../inst/include
 
 ## With R 3.1.0 or later, you can uncomment the following line to tell R to
 ## enable compilation with C++11 (where available)
@@ -13,5 +12,5 @@ NLOPTLIBS=-lnlopt -lm
 ## And with R 3.4.0, and RcppArmadillo 0.7.960.*, we turn C++11 on as OpenMP
 ## support within Armadillo prefers / requires it
 CXX_STD = CXX11
-PKG_CXXFLAGS = $(SHLIB_OPENMP_CXXFLAGS)
-PKG_LIBS = $(SHLIB_OPENMP_CFLAGS) $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS) $(NLOPTLIBS)
+PKG_CXXFLAGS = $(SHLIB_OPENMP_CXXFLAGS)  $(NLOPT_CXXFlags)
+PKG_LIBS = $(SHLIB_OPENMP_CFLAGS) $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS) $(NLOPT_LIBS)
