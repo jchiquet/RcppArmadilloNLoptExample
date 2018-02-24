@@ -2,6 +2,5 @@
 
 export(test_nlopt_cpp)
 import(RcppArmadillo)
-import(nloptr)
 importFrom(Rcpp,sourceCpp)
 useDynLib(nloptCpp)
