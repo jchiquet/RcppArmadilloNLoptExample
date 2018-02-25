@@ -1,10 +1,10 @@
 Package: nloptCpp
 Type: Package
-Title: Testing access to nlopt header via nloptr
+Title: Testing access to nlopt headers
 Version: 0.1.0
 Author: Julien Chiquet
 Maintainer: Julien Chiquet <julien.chiquet@gmail.com>
-Description: A simple package to test access to nlopt headers via nloptr and RcppArmadillo.
+Description: A simple package to test access to nlopt headers and RcppArmadillo.
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
