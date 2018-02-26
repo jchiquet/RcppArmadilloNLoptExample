@@ -1,0 +1,627 @@
+R version 3.4.3 (2017-11-30) -- "Kite-Eating Tree"
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> devtools::install_github("jyypam/nloptr")
+Downloading GitHub repo jyypam/nloptr@master
+from URL https://api.github.com/repos/jyypam/nloptr/zipball/master
+Installation failed: Not Found (404)
+
+> devtools::install_github("jyypma/nloptr")
+Downloading GitHub repo jyypma/nloptr@master
+from URL https://api.github.com/repos/jyypma/nloptr/zipball/master
+Installing nloptr
+'/usr/lib/R/bin/R' --no-site-file --no-environ --no-save --no-restore --quiet  \
+  CMD INSTALL '/tmp/RtmphFnBVI/devtools17b07ea5bd83/jyypma-nloptr-eecb1aa'  \
+  --library='/home/jchiquet/R/x86_64-pc-linux-gnu-library/3.4'  \
+  --install-tests 
+
+* installing *source* package ‘nloptr’ ...
+checking for g++... g++
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking how to run the C++ preprocessor... g++ -E
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether g++ accepts -g... (cached) yes
+checking for pkg-config... yes
+configure: Now testing for NLopt header file.
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking nlopt.h usability... no
+checking nlopt.h presence... no
+checking for nlopt.h... no
+configure: Need to configure and build NLopt
+configure: Starting to install library to /tmp/RtmphFnBVI/devtools17b07ea5bd83/jyypma-nloptr-eecb1aa/src/nlopt_src
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+hybrid.c: In function 'nlopt_result optimize_rect(double*, params*)':
+hybrid.c:91:12: warning: 'nlopt_result nlopt_minimize(nlopt_algorithm, int, nlopt_func_old, void*, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      ret = nlopt_minimize(p->local_alg, n, fcount, p, 
+            ^
+In file included from ../util/nlopt-util.h:30:0,
+                 from hybrid.c:27:
+../api/nlopt.h:329:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize(
+                            ^
+hybrid.c:91:12: warning: 'nlopt_result nlopt_minimize(nlopt_algorithm, int, nlopt_func_old, void*, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      ret = nlopt_minimize(p->local_alg, n, fcount, p, 
+            ^
+In file included from ../util/nlopt-util.h:30:0,
+                 from hybrid.c:27:
+../api/nlopt.h:329:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize(
+                            ^
+hybrid.c:99:39: warning: 'nlopt_result nlopt_minimize(nlopt_algorithm, int, nlopt_func_old, void*, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      stop->maxtime - (t - stop->start));
+                                       ^
+In file included from ../util/nlopt-util.h:30:0,
+                 from hybrid.c:27:
+../api/nlopt.h:329:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize(
+                            ^
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+newuoa.c: In function 'nlopt_result trsapp_(int*, int*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, const double*, const double*, const double*)':
+newuoa.c:184:9: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+   ret = nlopt_minimize_constrained(NLOPT_LD_MMA, *n, quad_model, &qmd,
+         ^
+In file included from ../util/nlopt-util.h:30:0,
+                 from newuoa.h:4,
+                 from newuoa.c:33:
+../api/nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+newuoa.c:184:9: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+   ret = nlopt_minimize_constrained(NLOPT_LD_MMA, *n, quad_model, &qmd,
+         ^
+In file included from ../util/nlopt-util.h:30:0,
+                 from newuoa.h:4,
+                 from newuoa.c:33:
+../api/nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+newuoa.c:187:35: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+         0., 0., 0., xtol, 1000, 0.);
+                                   ^
+In file included from ../util/nlopt-util.h:30:0,
+                 from newuoa.h:4,
+                 from newuoa.c:33:
+../api/nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+newuoa.c: In function 'nlopt_result biglag_(int*, int*, double*, double*, double*, double*, int*, int*, int*, double*, double*, double*, double*, double*, double*, double*, double*, const double*, const double*, const double*)':
+newuoa.c:1241:10: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+   return nlopt_minimize_constrained(NLOPT_LD_MMA, *n, lag, &ld,
+          ^
+In file included from ../util/nlopt-util.h:30:0,
+                 from newuoa.h:4,
+                 from newuoa.c:33:
+../api/nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+newuoa.c:1241:10: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+   return nlopt_minimize_constrained(NLOPT_LD_MMA, *n, lag, &ld,
+          ^
+In file included from ../util/nlopt-util.h:30:0,
+                 from newuoa.h:4,
+                 from newuoa.c:33:
+../api/nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+newuoa.c:1244:35: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+         0., 0., 0., xtol, 1000, 0.);
+                                   ^
+In file included from ../util/nlopt-util.h:30:0,
+                 from newuoa.h:4,
+                 from newuoa.c:33:
+../api/nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+deprecated.c: In function 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)':
+deprecated.c:149:13: warning: 'nlopt_result nlopt_minimize_econstrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, double, double, int, double)' is deprecated [-Wdeprecated-declarations]
+      return nlopt_minimize_econstrained(
+             ^
+deprecated.c:65:15: note: declared here
+ NLOPT_STDCALL nlopt_minimize_econstrained(
+               ^
+deprecated.c:149:13: warning: 'nlopt_result nlopt_minimize_econstrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, double, double, int, double)' is deprecated [-Wdeprecated-declarations]
+      return nlopt_minimize_econstrained(
+             ^
+deprecated.c:65:15: note: declared here
+ NLOPT_STDCALL nlopt_minimize_econstrained(
+               ^
+deprecated.c:153:60: warning: 'nlopt_result nlopt_minimize_econstrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, double, double, int, double)' is deprecated [-Wdeprecated-declarations]
+    xtol_rel, xtol_abs, ftol_rel, ftol_abs, maxeval, maxtime);
+                                                            ^
+deprecated.c:65:15: note: declared here
+ NLOPT_STDCALL nlopt_minimize_econstrained(
+               ^
+deprecated.c: In function 'nlopt_result nlopt_minimize(nlopt_algorithm, int, nlopt_func_old, void*, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)':
+deprecated.c:167:13: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      return nlopt_minimize_constrained(
+             ^
+deprecated.c:138:15: note: declared here
+ NLOPT_STDCALL nlopt_minimize_constrained(
+               ^
+deprecated.c:167:13: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      return nlopt_minimize_constrained(
+             ^
+deprecated.c:138:15: note: declared here
+ NLOPT_STDCALL nlopt_minimize_constrained(
+               ^
+deprecated.c:170:40: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+    xtol_rel, xtol_abs, maxeval, maxtime);
+                                        ^
+deprecated.c:138:15: note: declared here
+ NLOPT_STDCALL nlopt_minimize_constrained(
+               ^
+In file included from f77api.c:103:0:
+f77funcs.h: In function 'void nloptc_(int*, const int*, const int*, nlopt_f77_func, void*, const int*, nlopt_f77_func, char*, char*, const double*, const double*, double*, double*, const double*, const double*, const double*, const double*, const double*, const int*, const int*, const double*)':
+f77funcs.h:57:14: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      *info = nlopt_minimize_constrained((nlopt_algorithm) *algorithm, 
+              ^
+In file included from f77api.c:26:0:
+nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+In file included from f77api.c:103:0:
+f77funcs.h:57:14: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      *info = nlopt_minimize_constrained((nlopt_algorithm) *algorithm, 
+              ^
+In file included from f77api.c:26:0:
+nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+In file included from f77api.c:103:0:
+f77funcs.h:65:24: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      *maxeval, *maxtime);
+                        ^
+In file included from f77api.c:26:0:
+nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+In file included from f77api.c:103:0:
+f77funcs.h: In function 'void nlogls_(int*, int*, int*)':
+f77funcs.h:96:6: warning: 'void nlopt_get_local_search_algorithm(nlopt_algorithm*, nlopt_algorithm*, int*)' is deprecated [-Wdeprecated-declarations]
+      nlopt_get_local_search_algorithm(&deriv, &nonderiv, maxeval);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:363:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_get_local_search_algorithm(nlopt_algorithm *deriv,
+                    ^
+In file included from f77api.c:103:0:
+f77funcs.h:96:6: warning: 'void nlopt_get_local_search_algorithm(nlopt_algorithm*, nlopt_algorithm*, int*)' is deprecated [-Wdeprecated-declarations]
+      nlopt_get_local_search_algorithm(&deriv, &nonderiv, maxeval);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:363:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_get_local_search_algorithm(nlopt_algorithm *deriv,
+                    ^
+In file included from f77api.c:103:0:
+f77funcs.h:96:65: warning: 'void nlopt_get_local_search_algorithm(nlopt_algorithm*, nlopt_algorithm*, int*)' is deprecated [-Wdeprecated-declarations]
+      nlopt_get_local_search_algorithm(&deriv, &nonderiv, maxeval);
+                                                                 ^
+In file included from f77api.c:26:0:
+nlopt.h:363:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_get_local_search_algorithm(nlopt_algorithm *deriv,
+                    ^
+In file included from f77api.c:103:0:
+f77funcs.h: In function 'void nlosls_(int*, int*, int*)':
+f77funcs.h:104:6: warning: 'void nlopt_set_local_search_algorithm(nlopt_algorithm, nlopt_algorithm, int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_local_search_algorithm(deriv, nonderiv, *maxeval);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:366:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_local_search_algorithm(nlopt_algorithm deriv,
+                    ^
+In file included from f77api.c:103:0:
+f77funcs.h:104:6: warning: 'void nlopt_set_local_search_algorithm(nlopt_algorithm, nlopt_algorithm, int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_local_search_algorithm(deriv, nonderiv, *maxeval);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:366:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_local_search_algorithm(nlopt_algorithm deriv,
+                    ^
+In file included from f77api.c:103:0:
+f77funcs.h:104:64: warning: 'void nlopt_set_local_search_algorithm(nlopt_algorithm, nlopt_algorithm, int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_local_search_algorithm(deriv, nonderiv, *maxeval);
+                                                                ^
+In file included from f77api.c:26:0:
+nlopt.h:366:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_local_search_algorithm(nlopt_algorithm deriv,
+                    ^
+In file included from f77api.c:103:0:
+f77funcs.h: In function 'void nlogsp_(int*)':
+f77funcs.h:109:13: warning: 'int nlopt_get_stochastic_population()' is deprecated [-Wdeprecated-declarations]
+      *pop = nlopt_get_stochastic_population();
+             ^
+In file included from f77api.c:26:0:
+nlopt.h:370:19: note: declared here
+ NLOPT_EXTERN(int) nlopt_get_stochastic_population(void) NLOPT_DEPRECATED;
+                   ^
+In file included from f77api.c:103:0:
+f77funcs.h:109:13: warning: 'int nlopt_get_stochastic_population()' is deprecated [-Wdeprecated-declarations]
+      *pop = nlopt_get_stochastic_population();
+             ^
+In file included from f77api.c:26:0:
+nlopt.h:370:19: note: declared here
+ NLOPT_EXTERN(int) nlopt_get_stochastic_population(void) NLOPT_DEPRECATED;
+                   ^
+In file included from f77api.c:103:0:
+f77funcs.h:109:45: warning: 'int nlopt_get_stochastic_population()' is deprecated [-Wdeprecated-declarations]
+      *pop = nlopt_get_stochastic_population();
+                                             ^
+In file included from f77api.c:26:0:
+nlopt.h:370:19: note: declared here
+ NLOPT_EXTERN(int) nlopt_get_stochastic_population(void) NLOPT_DEPRECATED;
+                   ^
+In file included from f77api.c:103:0:
+f77funcs.h: In function 'void nlossp_(const int*)':
+f77funcs.h:113:6: warning: 'void nlopt_set_stochastic_population(int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_stochastic_population(*pop);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:371:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_stochastic_population(int pop) NLOPT_DEPRECATED;
+                    ^
+In file included from f77api.c:103:0:
+f77funcs.h:113:6: warning: 'void nlopt_set_stochastic_population(int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_stochastic_population(*pop);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:371:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_stochastic_population(int pop) NLOPT_DEPRECATED;
+                    ^
+In file included from f77api.c:103:0:
+f77funcs.h:113:42: warning: 'void nlopt_set_stochastic_population(int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_stochastic_population(*pop);
+                                          ^
+In file included from f77api.c:26:0:
+nlopt.h:371:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_stochastic_population(int pop) NLOPT_DEPRECATED;
+                    ^
+In file included from f77api.c:114:0:
+f77funcs.h: In function 'void nloptc(int*, const int*, const int*, nlopt_f77_func, void*, const int*, nlopt_f77_func, char*, char*, const double*, const double*, double*, double*, const double*, const double*, const double*, const double*, const double*, const int*, const int*, const double*)':
+f77funcs.h:57:14: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      *info = nlopt_minimize_constrained((nlopt_algorithm) *algorithm, 
+              ^
+In file included from f77api.c:26:0:
+nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+In file included from f77api.c:114:0:
+f77funcs.h:57:14: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      *info = nlopt_minimize_constrained((nlopt_algorithm) *algorithm, 
+              ^
+In file included from f77api.c:26:0:
+nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+In file included from f77api.c:114:0:
+f77funcs.h:65:24: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      *maxeval, *maxtime);
+                        ^
+In file included from f77api.c:26:0:
+nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+In file included from f77api.c:114:0:
+f77funcs.h: In function 'void nlogls(int*, int*, int*)':
+f77funcs.h:96:6: warning: 'void nlopt_get_local_search_algorithm(nlopt_algorithm*, nlopt_algorithm*, int*)' is deprecated [-Wdeprecated-declarations]
+      nlopt_get_local_search_algorithm(&deriv, &nonderiv, maxeval);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:363:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_get_local_search_algorithm(nlopt_algorithm *deriv,
+                    ^
+In file included from f77api.c:114:0:
+f77funcs.h:96:6: warning: 'void nlopt_get_local_search_algorithm(nlopt_algorithm*, nlopt_algorithm*, int*)' is deprecated [-Wdeprecated-declarations]
+      nlopt_get_local_search_algorithm(&deriv, &nonderiv, maxeval);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:363:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_get_local_search_algorithm(nlopt_algorithm *deriv,
+                    ^
+In file included from f77api.c:114:0:
+f77funcs.h:96:65: warning: 'void nlopt_get_local_search_algorithm(nlopt_algorithm*, nlopt_algorithm*, int*)' is deprecated [-Wdeprecated-declarations]
+      nlopt_get_local_search_algorithm(&deriv, &nonderiv, maxeval);
+                                                                 ^
+In file included from f77api.c:26:0:
+nlopt.h:363:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_get_local_search_algorithm(nlopt_algorithm *deriv,
+                    ^
+In file included from f77api.c:114:0:
+f77funcs.h: In function 'void nlosls(int*, int*, int*)':
+f77funcs.h:104:6: warning: 'void nlopt_set_local_search_algorithm(nlopt_algorithm, nlopt_algorithm, int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_local_search_algorithm(deriv, nonderiv, *maxeval);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:366:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_local_search_algorithm(nlopt_algorithm deriv,
+                    ^
+In file included from f77api.c:114:0:
+f77funcs.h:104:6: warning: 'void nlopt_set_local_search_algorithm(nlopt_algorithm, nlopt_algorithm, int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_local_search_algorithm(deriv, nonderiv, *maxeval);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:366:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_local_search_algorithm(nlopt_algorithm deriv,
+                    ^
+In file included from f77api.c:114:0:
+f77funcs.h:104:64: warning: 'void nlopt_set_local_search_algorithm(nlopt_algorithm, nlopt_algorithm, int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_local_search_algorithm(deriv, nonderiv, *maxeval);
+                                                                ^
+In file included from f77api.c:26:0:
+nlopt.h:366:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_local_search_algorithm(nlopt_algorithm deriv,
+                    ^
+In file included from f77api.c:114:0:
+f77funcs.h: In function 'void nlogsp(int*)':
+f77funcs.h:109:13: warning: 'int nlopt_get_stochastic_population()' is deprecated [-Wdeprecated-declarations]
+      *pop = nlopt_get_stochastic_population();
+             ^
+In file included from f77api.c:26:0:
+nlopt.h:370:19: note: declared here
+ NLOPT_EXTERN(int) nlopt_get_stochastic_population(void) NLOPT_DEPRECATED;
+                   ^
+In file included from f77api.c:114:0:
+f77funcs.h:109:13: warning: 'int nlopt_get_stochastic_population()' is deprecated [-Wdeprecated-declarations]
+      *pop = nlopt_get_stochastic_population();
+             ^
+In file included from f77api.c:26:0:
+nlopt.h:370:19: note: declared here
+ NLOPT_EXTERN(int) nlopt_get_stochastic_population(void) NLOPT_DEPRECATED;
+                   ^
+In file included from f77api.c:114:0:
+f77funcs.h:109:45: warning: 'int nlopt_get_stochastic_population()' is deprecated [-Wdeprecated-declarations]
+      *pop = nlopt_get_stochastic_population();
+                                             ^
+In file included from f77api.c:26:0:
+nlopt.h:370:19: note: declared here
+ NLOPT_EXTERN(int) nlopt_get_stochastic_population(void) NLOPT_DEPRECATED;
+                   ^
+In file included from f77api.c:114:0:
+f77funcs.h: In function 'void nlossp(const int*)':
+f77funcs.h:113:6: warning: 'void nlopt_set_stochastic_population(int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_stochastic_population(*pop);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:371:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_stochastic_population(int pop) NLOPT_DEPRECATED;
+                    ^
+In file included from f77api.c:114:0:
+f77funcs.h:113:6: warning: 'void nlopt_set_stochastic_population(int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_stochastic_population(*pop);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:371:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_stochastic_population(int pop) NLOPT_DEPRECATED;
+                    ^
+In file included from f77api.c:114:0:
+f77funcs.h:113:42: warning: 'void nlopt_set_stochastic_population(int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_stochastic_population(*pop);
+                                          ^
+In file included from f77api.c:26:0:
+nlopt.h:371:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_stochastic_population(int pop) NLOPT_DEPRECATED;
+                    ^
+In file included from f77api.c:129:0:
+f77funcs.h: In function 'void NLOPTC(int*, const int*, const int*, nlopt_f77_func, void*, const int*, nlopt_f77_func, char*, char*, const double*, const double*, double*, double*, const double*, const double*, const double*, const double*, const double*, const int*, const int*, const double*)':
+f77funcs.h:57:14: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      *info = nlopt_minimize_constrained((nlopt_algorithm) *algorithm, 
+              ^
+In file included from f77api.c:26:0:
+nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+In file included from f77api.c:129:0:
+f77funcs.h:57:14: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      *info = nlopt_minimize_constrained((nlopt_algorithm) *algorithm, 
+              ^
+In file included from f77api.c:26:0:
+nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+In file included from f77api.c:129:0:
+f77funcs.h:65:24: warning: 'nlopt_result nlopt_minimize_constrained(nlopt_algorithm, int, nlopt_func_old, void*, int, nlopt_func_old, void*, ptrdiff_t, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+      *maxeval, *maxtime);
+                        ^
+In file included from f77api.c:26:0:
+nlopt.h:339:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize_constrained(
+                            ^
+In file included from f77api.c:129:0:
+f77funcs.h: In function 'void NLOGLS(int*, int*, int*)':
+f77funcs.h:96:6: warning: 'void nlopt_get_local_search_algorithm(nlopt_algorithm*, nlopt_algorithm*, int*)' is deprecated [-Wdeprecated-declarations]
+      nlopt_get_local_search_algorithm(&deriv, &nonderiv, maxeval);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:363:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_get_local_search_algorithm(nlopt_algorithm *deriv,
+                    ^
+In file included from f77api.c:129:0:
+f77funcs.h:96:6: warning: 'void nlopt_get_local_search_algorithm(nlopt_algorithm*, nlopt_algorithm*, int*)' is deprecated [-Wdeprecated-declarations]
+      nlopt_get_local_search_algorithm(&deriv, &nonderiv, maxeval);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:363:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_get_local_search_algorithm(nlopt_algorithm *deriv,
+                    ^
+In file included from f77api.c:129:0:
+f77funcs.h:96:65: warning: 'void nlopt_get_local_search_algorithm(nlopt_algorithm*, nlopt_algorithm*, int*)' is deprecated [-Wdeprecated-declarations]
+      nlopt_get_local_search_algorithm(&deriv, &nonderiv, maxeval);
+                                                                 ^
+In file included from f77api.c:26:0:
+nlopt.h:363:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_get_local_search_algorithm(nlopt_algorithm *deriv,
+                    ^
+In file included from f77api.c:129:0:
+f77funcs.h: In function 'void NLOSLS(int*, int*, int*)':
+f77funcs.h:104:6: warning: 'void nlopt_set_local_search_algorithm(nlopt_algorithm, nlopt_algorithm, int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_local_search_algorithm(deriv, nonderiv, *maxeval);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:366:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_local_search_algorithm(nlopt_algorithm deriv,
+                    ^
+In file included from f77api.c:129:0:
+f77funcs.h:104:6: warning: 'void nlopt_set_local_search_algorithm(nlopt_algorithm, nlopt_algorithm, int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_local_search_algorithm(deriv, nonderiv, *maxeval);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:366:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_local_search_algorithm(nlopt_algorithm deriv,
+                    ^
+In file included from f77api.c:129:0:
+f77funcs.h:104:64: warning: 'void nlopt_set_local_search_algorithm(nlopt_algorithm, nlopt_algorithm, int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_local_search_algorithm(deriv, nonderiv, *maxeval);
+                                                                ^
+In file included from f77api.c:26:0:
+nlopt.h:366:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_local_search_algorithm(nlopt_algorithm deriv,
+                    ^
+In file included from f77api.c:129:0:
+f77funcs.h: In function 'void NLOGSP(int*)':
+f77funcs.h:109:13: warning: 'int nlopt_get_stochastic_population()' is deprecated [-Wdeprecated-declarations]
+      *pop = nlopt_get_stochastic_population();
+             ^
+In file included from f77api.c:26:0:
+nlopt.h:370:19: note: declared here
+ NLOPT_EXTERN(int) nlopt_get_stochastic_population(void) NLOPT_DEPRECATED;
+                   ^
+In file included from f77api.c:129:0:
+f77funcs.h:109:13: warning: 'int nlopt_get_stochastic_population()' is deprecated [-Wdeprecated-declarations]
+      *pop = nlopt_get_stochastic_population();
+             ^
+In file included from f77api.c:26:0:
+nlopt.h:370:19: note: declared here
+ NLOPT_EXTERN(int) nlopt_get_stochastic_population(void) NLOPT_DEPRECATED;
+                   ^
+In file included from f77api.c:129:0:
+f77funcs.h:109:45: warning: 'int nlopt_get_stochastic_population()' is deprecated [-Wdeprecated-declarations]
+      *pop = nlopt_get_stochastic_population();
+                                             ^
+In file included from f77api.c:26:0:
+nlopt.h:370:19: note: declared here
+ NLOPT_EXTERN(int) nlopt_get_stochastic_population(void) NLOPT_DEPRECATED;
+                   ^
+In file included from f77api.c:129:0:
+f77funcs.h: In function 'void NLOSSP(const int*)':
+f77funcs.h:113:6: warning: 'void nlopt_set_stochastic_population(int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_stochastic_population(*pop);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:371:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_stochastic_population(int pop) NLOPT_DEPRECATED;
+                    ^
+In file included from f77api.c:129:0:
+f77funcs.h:113:6: warning: 'void nlopt_set_stochastic_population(int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_stochastic_population(*pop);
+      ^
+In file included from f77api.c:26:0:
+nlopt.h:371:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_stochastic_population(int pop) NLOPT_DEPRECATED;
+                    ^
+In file included from f77api.c:129:0:
+f77funcs.h:113:42: warning: 'void nlopt_set_stochastic_population(int)' is deprecated [-Wdeprecated-declarations]
+      nlopt_set_stochastic_population(*pop);
+                                          ^
+In file included from f77api.c:26:0:
+nlopt.h:371:20: note: declared here
+ NLOPT_EXTERN(void) nlopt_set_stochastic_population(int pop) NLOPT_DEPRECATED;
+                    ^
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+testopt.cpp: In function 'int test_function(int)':
+testopt.cpp:218:11: warning: 'nlopt_result nlopt_minimize(nlopt_algorithm, int, nlopt_func_old, void*, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+     ret = nlopt_minimize(algorithm,
+           ^
+In file included from testopt.cpp:44:0:
+../api/nlopt.h:329:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize(
+                            ^
+testopt.cpp:218:11: warning: 'nlopt_result nlopt_minimize(nlopt_algorithm, int, nlopt_func_old, void*, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+     ret = nlopt_minimize(algorithm,
+           ^
+In file included from testopt.cpp:44:0:
+../api/nlopt.h:329:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize(
+                            ^
+testopt.cpp:223:21: warning: 'nlopt_result nlopt_minimize(nlopt_algorithm, int, nlopt_func_old, void*, const double*, const double*, double*, double*, double, double, double, double, const double*, int, double)' is deprecated [-Wdeprecated-declarations]
+     maxeval, maxtime);
+                     ^
+In file included from testopt.cpp:44:0:
+../api/nlopt.h:329:28: note: declared here
+ NLOPT_EXTERN(nlopt_result) nlopt_minimize(
+                            ^
+make[2]: *** No rule to make target 'nlopt-guile.cpp', needed by 'all'.  Stop.
+make[1]: *** [all-recursive] Error 1
+make: *** [all] Error 2
+make[1]: *** No rule to make target 'nlopt-guile.cpp', needed by 'install'.  Stop.
+make: *** [install-recursive] Error 1
+./configure: line 3348: checking: command not found
+configure: Done installing library to /tmp/RtmphFnBVI/devtools17b07ea5bd83/jyypma-nloptr-eecb1aa/src/nlopt_src
+mkdir: cannot create directory 'inst/include': File exists
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating R/PkgFlags.R
+** libs
+g++  -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dummy.cpp -o dummy.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG     -I/tmp/RtmphFnBVI/devtools17b07ea5bd83/jyypma-nloptr-eecb1aa/src/nlopt_src/include -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init_nloptr.c -o init_nloptr.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG     -I/tmp/RtmphFnBVI/devtools17b07ea5bd83/jyypma-nloptr-eecb1aa/src/nlopt_src/include -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nloptr.c -o nloptr.o
+g++ -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o nloptr.so dummy.o init_nloptr.o nloptr.o -lm -lm /tmp/RtmphFnBVI/devtools17b07ea5bd83/jyypma-nloptr-eecb1aa/src/nlopt_src/lib/libnlopt_cxx.a -L/usr/lib/R/lib -lR
+installing to /home/jchiquet/R/x86_64-pc-linux-gnu-library/3.4/nloptr/libs
+** R
+** inst
+** tests
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (nloptr)
