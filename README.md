@@ -18,18 +18,11 @@ In `nloptC/src/nlopt_c.cpp`, I export the function  `test_nlopt_c`, based on the
 
 ```r
 library(nloptC)
-```
-
-```
-## Error in library(nloptC): there is no package called 'nloptC'
-```
-
-```r
 test_nlopt_c()
 ```
 
 ```
-## Error in test_nlopt_c(): could not find function "test_nlopt_c"
+## Error in test_nlopt_c(): function 'nlopt_create' not provided by package 'nloptr'
 ```
 
 # nloptCpp
