@@ -8,6 +8,6 @@ Description: A simple package to test access to nlopt headers and RcppArmadillo.
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
-LinkingTo: Rcpp, RcppArmadillo, nloptr
-Imports: Rcpp, RcppArmadillo, nloptr
+LinkingTo: Rcpp, RcppArmadillo
+Imports: Rcpp, RcppArmadillo
 RoxygenNote: 6.0.1
